@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_message">
+
+    <ImageView
+        android:id="@+id/iv_headMessage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/head70"/>
+    <TextView
+        android:id="@+id/tv_messageName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv_headMessage"
+        android:layout_toLeftOf="@id/tv_message_time"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:textSize="18sp"
+        android:singleLine="true"
+        android:text="姓名"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tv_messageDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_messageName"
+        android:layout_alignLeft="@id/tv_messageName"
+        android:lines="1"
+        android:layout_marginTop="7dp"
+        android:textSize="15sp"
+        android:text="信息预览"
+        android:textColor="@color/gray"/>
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/tv_messageDetail"
+        android:lines="1"
+        android:layout_marginRight="20dp"
+        android:textSize="15sp"
+        android:text="1"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_message_num"/>
+    <!-- android:layout_toRightOf="@id/siv_head" -->
+    <TextView
+        android:id="@+id/tv_message_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_alignTop="@id/tv_messageName"
+        android:text="5/8 13:15"
+        android:textColor="@color/gray"/>
+</RelativeLayout>

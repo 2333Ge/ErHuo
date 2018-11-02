@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitesmoke"
+    xmlns:TopBar="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout 
+        android:id="@+id/rl_temp2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+    <com.erhuo.view.Topbar
+        android:id="@+id/topBar_pictureDisplay"
+        
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
+        
+       	TopBar:titleText="图片预览"
+        TopBar:leftText="返回"
+        TopBar:rightText="OK"
+        TopBar:rightBackground="@color/green"
+        TopBar:rightTextColor="@color/white"
+		TopBar:rightTextSize="5dp"
+		TopBar:rightHeight="10dp"
+		TopBar:rightWidth="14dp"
+		TopBar:leftIsClickable="true"
+		TopBar:rightIsClickable="true"
+		/>
+   </RelativeLayout>
+   <LinearLayout 
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_below="@id/rl_temp2"
+       android:layout_marginBottom="42dp"
+       android:gravity="center">
+    	<uk.co.senab.photoview.PhotoView
+    	    android:id="@+id/iv_display"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="match_parent"
+    	    />
+   </LinearLayout>
+   <CheckBox 
+       android:id="@+id/cb_chose"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentRight="true"
+       android:layout_alignParentEnd="true"
+       android:layout_alignParentBottom="true"
+       android:layout_marginRight="20dp"
+       android:layout_marginEnd="20dp"
+       android:layout_marginBottom="12dp"
+       android:text="选中"
+       android:textColor="@color/skyblue"
+       style="@style/checkBoxStyle"
+       />
+   
+    
+
+</RelativeLayout>

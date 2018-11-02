@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#EFEFEF"
+    android:id="@+id/rl_full"
+   	xmlns:TopBar="http://schemas.android.com/apk/res-auto">
+<!-- 图片选择界面 -->
+    <RelativeLayout 
+        android:id="@+id/rl_temp1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        
+        android:background="@color/white">
+    <com.erhuo.view.Topbar
+        android:id="@+id/topBar_chosePicture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
+       	TopBar:titleText="选择图片"
+        TopBar:leftText="Back"
+        TopBar:rightText="0/8"
+        TopBar:rightBackground="@color/green"
+        TopBar:rightTextColor="@color/white"
+		TopBar:rightTextSize="5dp"
+		TopBar:rightHeight="10dp"
+		TopBar:rightWidth="14dp"
+		TopBar:leftIsClickable="true"
+		TopBar:rightIsClickable="true"/>
+    
+   </RelativeLayout>
+
+   <HorizontalScrollView
+       android:id="@+id/hsv_containGridView"
+       android:layout_width="match_parent"
+       android:layout_height="110dp"
+       android:paddingTop="5dp"
+       android:paddingLeft="5dp"
+       android:paddingStart="5dp"
+       android:scrollbars="none"
+       android:alpha="0.9"
+       android:visibility="gone"
+       android:background="@android:color/black"
+       android:layout_below="@id/rl_temp1"
+       >
+    	<LinearLayout 
+    	    android:layout_width="wrap_content"
+       		android:layout_height="wrap_content"
+       		android:orientation="horizontal">
+    	    <GridView
+        	android:id="@+id/gv_display"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:numColumns="8" 
+       		android:columnWidth="100dp"
+        	android:horizontalSpacing="5dp"
+        	android:verticalSpacing="5dp"/>
+    	</LinearLayout>
+      </HorizontalScrollView>
+    
+    
+    
+	
+    <GridView
+        android:id="@+id/gridView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/rl_temp1"
+        android:numColumns="3" 
+        >
+		<!--android:listSelector="@color/bule_overlay"-->
+    </GridView>
+	
+    	<Button
+            android:id="@+id/b_OK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+           	android:background="#ADD8E6"
+            android:visibility="visible"
+            android:textColor="@android:color/black"
+            android:text="确定" />
+        <ListView 
+	    	android:id="@+id/lv_listFile"
+	    	android:layout_height="wrap_content"
+	    	android:layout_width="match_parent"
+	    	android:layout_toLeftOf="@id/b_OK"
+	    	android:alpha="0.9"
+        	android:background="@android:color/black"
+        	android:visibility="gone"
+	    	android:layout_marginTop="80dp"
+	    	android:paddingTop="5dp">
+    	
+	     </ListView>
+	     <Button
+            android:id="@+id/b_fileName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/b_OK"
+            android:layout_alignParentBottom="true"
+            android:layout_alignTop="@id/b_OK"
+           	android:alpha="0.7"
+        	android:background="@android:color/black"
+            android:visibility="visible"
+            android:textColor="@android:color/white"
+            android:singleLine="true"
+            android:padding="0dp"
+            android:text="当前目录：" />
+    
+
+</RelativeLayout>

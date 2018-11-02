@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_concern"
+        android:title="关注"
+        android:icon="@drawable/like_empty32"/>
+    <item
+        android:id="@+id/item_fanKui"
+        android:title="反馈"
+        android:icon="@drawable/like_empty32"/>
+</menu>

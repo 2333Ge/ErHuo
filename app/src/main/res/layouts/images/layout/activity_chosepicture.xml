@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:Topbar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/whitesmoke"
+     >
+    <com.erhuo.view.Topbar 
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        Topbar:titleText="选择相片"
+        Topbar:titleTextSize="8dp"
+        Topbar:leftIsVisable="true"
+        Topbar:leftText="返回"
+        Topbar:leftTextSize="8dp"
+        Topbar:rightTextColor="@color/blue"
+        Topbar:titleTextColor="@color/black"
+        Topbar:rightIsVisable="false"
+        Topbar:rightText="123"
+        Topbar:rightTextSize="8dp"
+        >
+        
+    </com.erhuo.view.Topbar>
+    <GridView 
+        android:id="@+id/gv_chosePicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numColumns="4"
+        android:horizontalSpacing="3dp"
+        android:verticalSpacing="3dp">
+    </GridView>
+
+</LinearLayout>

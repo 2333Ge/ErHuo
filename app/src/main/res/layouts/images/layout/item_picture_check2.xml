@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    xmlns:SelectImageView="http://schemas.android.com/apk/res-auto">
+    
+    <!-- 此处实现添加图片的功能使用GirdView和自定义控件SelectImageView结合,小号版 -->
+   		<com.erhuo.view.SelectImageView
+   		    android:id="@+id/siv_itemImgCheck2"
+   		    android:layout_width="88dp"
+   		    android:layout_height="88dp"
+   		    SelectImageView:deleteSrc="@drawable/delete32"
+   		    SelectImageView:imageBackground="@drawable/imgbg">
+
+        <!-- 为什么必须有后面一个属性 -->
+
+   		</com.erhuo.view.SelectImageView>
+   		
+
+</RelativeLayout>

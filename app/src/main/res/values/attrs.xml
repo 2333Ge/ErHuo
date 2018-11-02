@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Topbar">
+        <attr name="titleText" format="string"/>
+        <!-- dimension 尺寸类型 -->
+        <attr name="titleTextSize" format="dimension"/>
+        <attr name="titleTextColor" format="color"/>
+
+        <attr name="leftText" format="string"/>
+        <attr name="leftTextSize" format="dimension"/>
+        <attr name="leftTextColor" format="color"/>
+        <!-- reference 资源类型 -->
+        <attr name="leftBackground" format="reference|color"/>
+        <attr name="leftIsVisable" format="boolean"/>
+        <attr name="leftIsClickable" format="boolean"/>
+        <attr name="leftWidth" format="dimension"/>
+        <attr name="leftHeight" format="dimension"/>
+
+        <attr name="rightText" format="string"/>
+        <attr name="rightTextSize" format="dimension"/>
+        <attr name="rightTextColor" format="color"/>
+        <!-- reference 类型不固定 -->
+        <attr name="rightBackground" format="reference|color"/>
+        <attr name="rightIsVisable" format="boolean"/>
+        <attr name="rightIsClickable" format="boolean"/>
+        <attr name="rightWidth" format="dimension"/>
+        <attr name="rightHeight" format="dimension"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="SelectImageView">
+        <attr name="deleteBackground" format="reference"/>
+        <attr name="deleteSrc" format="reference"/>
+
+        <attr name="imageBackground" format="reference"/>
+        <attr name="imageSrc" format="reference"/>
+
+
+    </declare-styleable>
+</resources>

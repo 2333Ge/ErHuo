@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:background="@color/white"
+    >
+    <ImageView
+        android:id="@+id/iv_searchItem"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/head"
+        android:scaleType="centerCrop"
+        android:layout_marginVertical="5dp"
+        android:layout_marginLeft="6dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="10dp">
+        <TextView
+            android:id="@+id/tv_title_searchItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="这是商品描述这是商品描述,这是商品描述这是商品描述"
+            android:textSize="15sp"
+            android:ellipsize="end"
+            android:layout_marginTop="10dp"
+            android:maxLines="2"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/tv_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:textSize="13sp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/orangered"
+            android:text="¥"/>
+
+        <TextView
+            android:id="@+id/tv_price_searchItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_temp"
+            android:text="90"
+            android:layout_toRightOf="@id/tv_temp"
+            android:layout_marginLeft="3dp"
+            android:textColor="@color/orangered"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/tv_time_searchItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textSize="14sp"
+            android:textColor="@color/grey"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="2018/6/26"/>
+        <TextView
+            android:id="@+id/tv_priceOld_searchItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_temp"
+            android:text="1234565565565"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_toRightOf="@id/tv_price_searchItem"
+            android:layout_toLeftOf="@id/tv_time_searchItem"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:textColor="#aaaaaa"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</LinearLayout>

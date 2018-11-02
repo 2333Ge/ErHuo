@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item
+        android:id="@+id/menu_item_message"
+        android:title="私聊"
+        app:showAsAction="withText"
+        android:icon="@drawable/history48"
+        />
+    <item
+        android:id="@+id/menu_item_callback"
+        android:title="反馈"
+        app:showAsAction="withText"
+        android:icon="@drawable/mine48"/>
+    <item
+        android:id="@+id/menu_item_share"
+        android:title="分享"
+        app:showAsAction="withText"
+        android:icon="@drawable/find48"/>
+</menu>

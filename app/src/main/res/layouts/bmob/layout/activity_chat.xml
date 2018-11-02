@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitesmoke"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_temp4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/include_toolbar"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eeeeee"/>
+    </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_chat"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:layout_weight="1">
+            <!--android:layout_below="@id/ll_temp4"
+            android:layout_above="@id/ll_temp2">-->
+
+        </android.support.v7.widget.RecyclerView>
+    <LinearLayout
+        android:id="@+id/ll_temp2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#eeeeee">
+        <!--
+        android:layout_alignParentBottom="true"-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+            <EditText
+                android:id="@+id/et_chatInput"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/et_background"
+                android:layout_width="0dp"
+                android:textCursorDrawable="@drawable/cursor_blue"
+                android:gravity="center_vertical"
+                android:padding="3dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="#0f0f0f"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/b_sendMessage"
+                android:layout_width="45dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="33dp"
+                android:background="@drawable/bg_chat_button"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:text="发送"/>
+            <Button
+                android:id="@+id/b_chatMore"
+                android:layout_width="31dp"
+                android:layout_height="31dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:textSize="19sp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_addmore_btn"
+                android:text="+"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_chatMore"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:paddingTop="15dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/photos48"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="图片"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/gray"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:paddingTop="15dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/camer48"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="拍照"
+                    android:textColor="@color/gray"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+    <ImageView
+        android:id="@+id/iv_pictureItem" 
+        android:layout_width="70dp"
+    	android:layout_height="70dp"
+		android:scaleType="centerCrop"
+    	android:background="@drawable/find48" />
+    <CheckBox
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content" 
+        android:id="@+id/rb_selectedItem"
+        android:layout_alignTop="@id/iv_pictureItem" 
+        android:layout_alignRight="@id/iv_pictureItem"
+       	android:layout_alignEnd="@id/iv_pictureItem"
+        android:layout_marginRight="1dp" 
+        android:layout_marginEnd="1dp" 
+        android:layout_marginTop="1dp"
+        />
+
+</RelativeLayout>

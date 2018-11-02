@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/whitesmoke"
+    xmlns:topbar="http://schemas.android.com/apk/res-auto"
+    xmlns:SelectImageView="http://schemas.android.com/apk/res-auto"
+    >
+    <!--  -->
+    <com.erhuo.view.Topbar
+        android:id="@+id/topbar_sell"
+        android:background="@color/white"
+    	android:layout_height="50dp"
+    	android:layout_width="match_parent"
+        topbar:titleText="卖闲置"
+       	topbar:leftText="返回"
+       	SelectImageView:leftIsClickable="true"
+       	SelectImageView:rightIsVisable="false">
+    </com.erhuo.view.Topbar>
+
+    <ScrollView 
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+   		android:layout_height="wrap_content"
+   		android:orientation="vertical" >
+    <EditText 
+        android:id="@+id/et_sellName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:layout_marginLeft="3dp"
+		android:layout_marginRight="3dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:hint="宝贝标题"
+		android:textSize="9pt"
+        android:paddingLeft="5dp"
+        />
+		<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+   		android:layout_height="330dp"
+   		 >
+			<android.support.v7.widget.CardView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				topbar:cardCornerRadius="15dp"
+				android:theme="@style/AppTheme"
+				android:elevation="10dp">
+   		 <!-- android:orientation="vertical" -->
+   		<EditText
+   		    android:id="@+id/et_sellDetail" 
+   		    android:background="@null"
+   		     android:paddingLeft="5dp"
+			android:layout_marginLeft="3dp"
+			android:layout_marginRight="3dp"
+   		    android:layout_width="match_parent"
+   		    android:layout_height="wrap_content"
+   		    android:textColor="@color/gray"
+   		    android:hint="详细描述\n转手原因、入手渠道、规格尺寸、新旧程度和使用感受等~"
+   		    android:textColorHint="@color/gray"
+			android:textSize="8pt"/>
+		<GridView
+			android:id="@+id/gv_chose"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="110dp"
+			android:layout_marginLeft="2dp"
+			android:layout_marginRight="2dp"
+			android:horizontalSpacing="3dp"
+			android:verticalSpacing="3dp"
+			android:numColumns="4" />
+			</android.support.v7.widget.CardView>
+   	</RelativeLayout>
+
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+   		android:layout_height="50dp">
+        <TextView
+        	android:id="@+id/b_type"
+        	android:background="@null"
+			android:layout_marginLeft="15dp"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+        	android:textColor="@color/gray"
+        	android:text="类型">
+        </TextView>
+
+		<Button
+			android:id="@+id/b_typeName"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:clickable="false"
+			android:text="选择类型"
+			android:visibility="gone"
+			android:textColor="@color/gray" />
+		<!---->
+       <ImageView
+        	android:id="@+id/iv_type_in"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_alignTop="@id/b_type"
+		   android:layout_alignParentRight="true"
+		   android:layout_marginRight="20dp"
+			android:layout_alignBottom="@id/b_type"
+        	android:src="@drawable/right"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+   		android:layout_height="50dp"
+   		android:orientation="horizontal" >
+
+        <TextView
+        	android:id="@+id/tv_price"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+			android:layout_marginLeft="15dp"
+        	android:text="定价"
+        	android:background="@null"
+        	android:textColor="@color/gray"/>
+        <EditText 
+            android:id="@+id/et_price"
+        	android:layout_width="150dp"
+        	android:layout_height="wrap_content"
+        	android:inputType="number|numberDecimal"
+        	android:textColor="@color/gray"/>
+       
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+   		android:layout_height="50dp"
+   		android:orientation="horizontal" >
+
+        <TextView
+        	android:id="@+id/tv_priceOriginal"
+        	android:background="@null"
+        	android:layout_width="wrap_content"
+			android:layout_marginLeft="15dp"
+        	android:layout_height="wrap_content"
+        	android:text="原价"
+        	android:textColor="@color/gray"/>
+        <EditText 
+            android:id="@+id/et_priceOriginal"
+        	android:layout_width="150dp"
+        	android:layout_height="wrap_content"
+        	android:textColor="@color/gray"
+        	android:inputType="number|numberDecimal"/>
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+   		android:layout_height="50dp"
+		android:gravity="center_vertical"
+   		android:orientation="horizontal" >
+        <TextView
+        	android:id="@+id/b_address"
+        	android:background="@null"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+			android:layout_marginLeft="15dp"
+        	android:text="地址"
+        	android:textColor="@color/gray">
+        </TextView>
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+   		android:layout_height="wrap_content"
+   		android:orientation="horizontal" >
+
+			<Button
+				android:id="@+id/b_up"
+				android:background="@color/orangered"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="发布"
+				android:paddingStart="5dp"
+				android:paddingLeft="5dp">
+			</Button>
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>
+
+</LinearLayout>

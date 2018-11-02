@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     xmlns:TopBar="http://schemas.android.com/apk/res-auto"
+     android:background="@color/whitesmoke">
+   >
+   <RelativeLayout 
+        android:id="@+id/rl_temp3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+    <com.erhuo.view.Topbar
+        android:id="@+id/topBar_choseType"
+        
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
+        
+       	TopBar:titleText="类型选择"
+        TopBar:leftText="Back"
+        TopBar:rightText="OK"
+        TopBar:rightBackground="@color/green"
+        TopBar:rightTextColor="@color/white"
+		TopBar:rightTextSize="5dp"
+		TopBar:rightHeight="10dp"
+		TopBar:rightWidth="14dp"
+		TopBar:leftIsClickable="true"
+		TopBar:rightIsClickable="true"
+		/>
+   </RelativeLayout>
+    <ListView 
+        android:id="@+id/lv_typeAll"
+        android:layout_height="match_parent"
+        android:layout_width="110dp"
+        android:layout_below="@id/rl_temp3"
+        />
+    <LinearLayout 
+        android:id="@+id/ll_temp"
+         android:layout_height="match_parent"
+        android:layout_width="2dp"
+        android:layout_below="@id/rl_temp3"
+        android:layout_toRightOf="@id/lv_typeAll"
+        android:background="@color/gray"
+        android:orientation="vertical"/>
+    <ListView 
+        android:id="@+id/lv_typeNow"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@id/ll_temp"
+        android:layout_below="@id/rl_temp3"/>
+
+</RelativeLayout>
